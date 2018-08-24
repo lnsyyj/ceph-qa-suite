@@ -2085,7 +2085,7 @@ class CephManager:
         """
         Extract all the monitor status information from the cluster
         """
-        print "yujiang" + str(ctx)
+        print "yujiang" + str(self.ctx)
         addr = self.ctx.ceph[self.cluster].conf['mon.%s' % mon]['mon addr']
         out = self.raw_cluster_cmd('-m', addr, 'mon_status')
         return json.loads(out)
